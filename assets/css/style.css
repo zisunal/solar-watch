@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    header {
+        background: #042624;
+        padding: 20px 0;
+        width: 100%;
+        height: 8vh;
+        h2 {
+            text-align: center;
+            color: #FFF;
+        }
+    }
+    .solar-system {
+        width: 100%;
+        height: 92vh;
+        background-image: url('../img/bg.jpeg');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .solar-orbit {
+            width: 360px;
+            height: 360px;
+            border: 1px solid #FFF;
+            border-radius: 50%;
+            position: relative;
+            top: 20%;
+            left: 20%;
+            animation: rotate 20s linear infinite;
+            .sun img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 180px;
+            }
+            .earth-orbit {
+                width: 160px;
+                height: 160px;
+                border: 1px solid #FFF;
+                border-radius: 50%;
+                position: relative;
+                top: 14%;
+                left: 14%;
+                animation: rotate 5s linear infinite;
+                .earth img {
+                    width: 150px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    animation: rotate 10s linear infinite;
+                }
+                .moon img {
+                    width: 80px;
+                    position: absolute;
+                    top: 10%;
+                    left: 20%;
+                    animation: rotate 2s linear infinite;
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
